@@ -1,0 +1,110 @@
+.countdownHolder{
+	width:450px;
+	margin:0 auto;
+	font: 40px/1.5 'Open Sans Condensed',sans-serif;
+	text-align:center;
+	letter-spacing:-4px;
+}
+
+.position{
+	display: inline-block;
+	height: 1.6em;
+	overflow: hidden;
+	position: relative;
+	width: 0.6em;
+}
+
+.digit{
+	position:absolute;
+	display:block;
+	width:4px;
+	color: #a80d6c
+	border-radius:0.2em;
+	text-align:center;
+	letter-spacing:0;
+	font-size: 14px;
+	font-family: Open-Sans;
+	font-weight: bold;
+}
+
+.digit.static{
+
+	
+    color: #a80d6c
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.5, #3A3A3A),
+		color-stop(0.5, #444444)
+	);
+}
+
+/**
+ * You can use these classes to hide parts
+ * of the countdown that you don't need.
+ */
+
+.countDays{
+ position: relative;
+ /* display:none !important;*/ }
+.countDiv0{
+}
+.countHours{}
+.countDays:after
+{
+	content: " d ";
+	font-family: Open-Sans;
+	display: inline-block;
+	vertical-align: super;
+	font-size: 18px;
+}
+.countHours:after
+{
+	content: " t ";
+	font-family: Open-Sans;
+	display: inline-block;
+	vertical-align: super;
+	font-size: 18px;
+}
+.countMinutes:after
+{
+	content: " m ";
+	font-family: Open-Sans;
+	display: inline-block;
+	vertical-align: super;
+	font-size: 18px;
+}
+.countSeconds:after
+{
+	content: " s ";
+	font-family: Open-Sans;
+	display: inline-block;
+	vertical-align: super;
+	font-size: 18px;
+}
+.countDiv1{}
+.countMinutes{}
+.countDiv2{}
+.countSeconds{}
+.countDiv:before
+{
+	content: ":";
+	position: absolute;
+	top: 0;
+	left: 35%;
+
+}
+
+.countDiv{
+	display:inline-block;
+	width:18px;
+	height:1.6em;
+	position:relative;
+	content: ':';
+}
+
+.countDiv:after{
+	top:0.9em;
+}
