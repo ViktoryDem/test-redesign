@@ -32,8 +32,16 @@ body {
 }
 
 @media (max-width: 991px) {
+  header {
+    background-color: var(--main-color);
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 991px) {
   .hide-on-mob {
     display: none;
+    padding-top: 60px;
   }
 }
 
@@ -316,6 +324,7 @@ a.custom-btn:active, a.custom-btn:focus {
 .toolbar-item {
   text-decoration: none;
   padding-inline: 10px;
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -358,14 +367,16 @@ a.custom-btn:active, a.custom-btn:focus {
   -webkit-mask: url(../img/icons/prizes.svg) no-repeat 50% 50%;
   mask: url(../img/icons/prizes.svg) no-repeat 50% 50%;
 }
-.toolbar-item:hover {
-  text-decoration: none;
-}
-.toolbar-item:hover .toolbar-item__icon::before {
-  background-color: var(--main-color);
-}
-.toolbar-item:hover .toolbar-item__text {
-  color: var(--main-color);
+@media (hover: hover) {
+  .toolbar-item:hover {
+    text-decoration: none;
+  }
+  .toolbar-item:hover .toolbar-item__icon::before {
+    background-color: var(--main-color);
+  }
+  .toolbar-item:hover .toolbar-item__text {
+    color: var(--main-color);
+  }
 }
 .toolbar-item.active .toolbar-item__icon:before {
   background-color: var(--main-color);
