@@ -382,6 +382,9 @@ a.custom-btn:active, a.custom-btn:focus {
     color: var(--main-color);
   }
 }
+.toolbar-item:hover, .toolbar-item:focus {
+  text-decoration: none;
+}
 .toolbar-item.active .toolbar-item__icon:before {
   background-color: var(--main-color);
 }
