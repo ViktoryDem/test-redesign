@@ -190,8 +190,9 @@ body {
   }
 }
 
-button.btn {
+a.custom-btn {
   -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
   cursor: pointer;
   box-shadow: none;
   border: none;
@@ -204,13 +205,15 @@ button.btn {
   border-radius: 43px;
   transition: background-color 0.3s;
 }
-button.btn:active, button.btn:focus {
-  outline: none;
-}
 @media (hover: hover) {
-  button.btn:hover {
+  a.custom-btn:hover {
     background-color: var(--accent-color);
+    color: #fff;
   }
+}
+a.custom-btn:active, a.custom-btn:focus {
+  outline: none;
+  color: #fff;
 }
 
 .games {
