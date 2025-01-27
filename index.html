@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://onlinequizzen.dk/game -->
+<html lang="da">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Alle spil - OnlineQuizzen.dk</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Alle spil - OnlineQuizzen.dk_files/style.css" rel="stylesheet" media="screen">
+    <link href="./Alle spil - OnlineQuizzen.dk_files/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./Alle spil - OnlineQuizzen.dk_files/custom.css" rel="stylesheet" media="screen">
+    <link href="./Alle spil - OnlineQuizzen.dk_files/Glyphter.css" rel="stylesheet" media="screen">
+    <link href="./Alle spil - OnlineQuizzen.dk_files/jquery.countdown.css" rel="stylesheet" media="screen">
+
+
+
+    <link rel="icon" href="https://onlinequizzen.dk/assets/onlinequizzendk/fav48.png">
+    <link rel="shortcut icon" href="https://onlinequizzen.dk/assets/onlinequizzendk/fav16.png">
+
+
+    <meta property="og:url" content="https://onlinequizzen.dk/game">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alle spil - OnlineQuizzen.dk">
+    <meta property="og:description" content="Spil vores spil på OnlineQuizzen.dk og vind præmier.">
+    <meta property="og:image" content="/assets/onlinequizzendk/ingamelogo.png">
+
+
+
+
+
+    <script type="text/javascript" async="" src="./Alle spil - OnlineQuizzen.dk_files/js"></script>
+    <script async="" src="./Alle spil - OnlineQuizzen.dk_files/fbevents.js.Без названия"></script>
+    <script async="" src="./Alle spil - OnlineQuizzen.dk_files/gtm.js.Без названия"></script>
+    <script>
+        dataLayer = [{
+            'userID': '543759',
+        }];
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NRDPWS5');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+
+
+    <script src="./Alle spil - OnlineQuizzen.dk_files/jquery.min.js.Без названия"></script>
+
+
+
+    <script src="./Alle spil - OnlineQuizzen.dk_files/saved_resource" async=""></script>
+
+
+
+
+    <link rel="stylesheet" href="./Alle spil - OnlineQuizzen.dk_files/sweetalert2.min.css"
+        integrity="sha256-zgaKkhKpXzSrPyXVfczHhygcPSHyhHD+PSWnq3LZHHs=" crossorigin="anonymous">
+    <script src="./Alle spil - OnlineQuizzen.dk_files/sweetalert2.min.js.Без названия"
+        integrity="sha256-NBMm26+MVgnPpBR/jdmM0orRevP7j26HoHC3IPW/T+k=" crossorigin="anonymous"></script>
+
+
+    <script>
+
+        $(document).on('click', '#deleteFavoriteButton', function (event) {
+
+            event.preventDefault();
+
+            console.log("#deleteFavoriteButton");
+            console.log($(this).attr('gameid'));
+
+            deleteFavorite($(this).attr('gameid'));
+
+            $(this).text("Favorit slettet");
+
+        });
+
+        $(document).on('click', '#markFavoriteButton', function (event) {
+
+            event.preventDefault();
+
+            console.log("#markFavoriteButton");
+            console.log($(this).attr('gameid'));
+
+            markFavorite($(this).attr('gameid'));
+
+            $(this).text("Favorit tilføjet");
+
+        });
+
+        function markFavorite(gameID) {
+
+            $.get('/game/favorite/create/' + gameID);
+
+
+
+        }
+
+        function deleteFavorite(gameID) {
+
+            $.get('/game/favorite/delete/' + gameID);
+
+
+
+        }
+
+        // Facebook share in window
+        $(document).ready(function () {
+            $('.fb-share').click(function (e) {
+                e.preventDefault();
+                window.open($(this).attr('href'), 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+
+                $(this).hide();
+                $('#playagain').show();
+
+                return false;
+            });
+
+            $('.ad-click').click(function (e) {
+                e.preventDefault();
+                window.open($(this).attr('href'), 'fbShareWindow');
+
+                $('#resultad').hide();
+                $('#resultadearncredits').hide();
+
+                $('#resultadearncredits-playagain').show();
+
+                return false;
+            });
+
+
+        });
+
+    </script>
+
+
+    <link rel="manifest" href="https://onlinequizzen.dk/manifest.json">
+    <link rel="stylesheet" href="new-files/css/style.css">
+    <script src="./Alle spil - OnlineQuizzen.dk_files/OneSignalSDK.js.Без названия" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+
+            OneSignal.init({
+
+                appId: "d2434245-6ead-41e9-b946-318fc6f5b906",
+
+            });
+
+
+            OneSignal.sendTags({
+
+                user_id: '532409',
+                email: 'fsdfsdfsd@gfgf.fgf',
+                real_name: 'Fsdfsdfsd ',
+                first_name: 'Fsdfsdfsd',
+                last_name: '',
+                points: '0',
+
+            });
+
+
+            OneSignal.isPushNotificationsEnabled(function (isEnabled) {
+                if (isEnabled) {
+                    // user has subscribed
+                    OneSignal.getUserId(function (userId) {
+                        console.log('player_id of the subscribed user is : ' + userId);
+                        // Make a POST call to your server with the user ID        
+
+                        url = "/api/onesignal/setplayerid/532409/" + userId + "/2662055";
+
+                        //$.getJSON( url, function( data ) {
+
+                        //console.log("Post to URL done");
+
+                        //});
+
+                    });
+                }
+            });
+
+        });
+
+    </script>
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '378209865978805');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=378209865978805&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script src="./Alle spil - OnlineQuizzen.dk_files/bundle.js.Без названия"></script>
+    <script src="./Alle spil - OnlineQuizzen.dk_files/OneSignalPageSDKES6.js.Без названия" async=""></script>
+    <style>
+        .ub-emb-iframe-wrapper {
+            display: none;
+            position: relative;
+            vertical-align: middle
+        }
+
+        .ub-emb-iframe-wrapper.ub-emb-visible {
+            display: inline-block
+        }
+
+        .ub-emb-iframe-wrapper .ub-emb-close {
+            background-color: hsla(0, 0%, 100%, .6);
+            border: 0;
+            border-radius: 50%;
+            color: #525151;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            height: 20px;
+            line-height: 1;
+            outline: none;
+            padding: 0;
+            position: absolute;
+            right: 10px;
+            text-align: center;
+            top: 10px;
+            transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+            width: 20px;
+            z-index: 1
+        }
+
+        .ub-emb-iframe-wrapper.ub-emb-mobile .ub-emb-close {
+            transition: none
+        }
+
+        .ub-emb-iframe-wrapper .ub-emb-close:before {
+            content: "";
+            height: 40px;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            width: 40px
+        }
+
+        .ub-emb-iframe-wrapper .ub-emb-close:hover {
+            background-color: #fff;
+            -ms-transform: scale(1.2);
+            transform: scale(1.2)
+        }
+
+        .ub-emb-iframe-wrapper .ub-emb-close:active,
+        .ub-emb-iframe-wrapper .ub-emb-close:focus {
+            background: hsla(0, 0%, 100%, .35);
+            color: #444;
+            outline: none
+        }
+
+        .ub-emb-iframe-wrapper .ub-emb-iframe {
+            border: 0;
+            max-height: 100%;
+            max-width: 100%
+        }
+
+        .ub-emb-overlay .ub-emb-iframe-wrapper .ub-emb-iframe {
+            box-shadow: 0 0 12px rgba(0, 0, 0, .3), 0 1px 5px rgba(0, 0, 0, .2)
+        }
+
+        .ub-emb-overlay .ub-emb-iframe-wrapper.ub-emb-mobile {
+            max-width: 100vw
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0lmcmFtZVdyYXBwZXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHVCQUVFLFlBQWEsQ0FDYixpQkFBa0IsQ0FDbEIscUJBQ0YsQ0FFQSxzQ0FDRSxvQkFDRixDQUVBLHFDQUNFLG1DQUF5QyxDQUV6QyxRQUFTLENBRFQsaUJBQWtCLENBRWxCLGFBQWMsQ0FDZCxjQUFlLENBQ2YsNEJBQThCLENBQzlCLGNBQWUsQ0FDZixlQUFtQixDQUNuQixXQUFZLENBQ1osYUFBYyxDQUNkLFlBQWEsQ0FDYixTQUFVLENBQ1YsaUJBQWtCLENBQ2xCLFVBQVcsQ0FDWCxpQkFBa0IsQ0FDbEIsUUFBUyxDQUNULHFFQUEyRSxDQUMzRSxVQUFXLENBQ1gsU0FDRixDQUVBLG1EQUNFLGVBQ0YsQ0FFQSw0Q0FDRSxVQUFXLENBQ1gsV0FBWSxDQUNaLGlCQUFrQixDQUNsQixXQUFZLENBQ1osU0FBVSxDQUNWLFVBQ0YsQ0FFQSwyQ0FDRSxxQkFBc0IsQ0FDdEIsd0JBQXFCLENBQXJCLG9CQUNGLENBRUEsdUZBRUUsOEJBQW9DLENBQ3BDLFVBQVcsQ0FDWCxZQUNGLENBRUEsc0NBRUUsUUFBUyxDQUNULGVBQWdCLENBQ2hCLGNBQ0YsQ0FFQSxzREFDRSwyREFDRixDQUVBLHFEQUNFLGVBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyIudWItZW1iLWlmcmFtZS13cmFwcGVyIHtcbiAgLyogVGhpcyBlbGVtZW50IGlzIHNpemVkIGF0IGNvbXBvbmVudCByZW5kZXIgdGltZSAqL1xuICBkaXNwbGF5OiBub25lO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG59XG5cbi51Yi1lbWItaWZyYW1lLXdyYXBwZXIudWItZW1iLXZpc2libGUge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG5cbi51Yi1lbWItaWZyYW1lLXdyYXBwZXIgLnViLWVtYi1jbG9zZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgLjYpO1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGJvcmRlcjogMDtcbiAgY29sb3I6ICM1MjUxNTE7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZm9udC1mYW1pbHk6IEFyaWFsLCBzYW5zLXNlcmlmO1xuICBmb250LXNpemU6IDIwcHg7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG4gIGhlaWdodDogMjBweDtcbiAgbGluZS1oZWlnaHQ6IDE7XG4gIG91dGxpbmU6IG5vbmU7XG4gIHBhZGRpbmc6IDA7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IDEwcHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgdG9wOiAxMHB4O1xuICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMjAwbXMgZWFzZS1pbi1vdXQsIGJhY2tncm91bmQtY29sb3IgMjAwbXMgZWFzZS1pbi1vdXQ7XG4gIHdpZHRoOiAyMHB4O1xuICB6LWluZGV4OiAxO1xufVxuXG4udWItZW1iLWlmcmFtZS13cmFwcGVyLnViLWVtYi1tb2JpbGUgLnViLWVtYi1jbG9zZSB7XG4gIHRyYW5zaXRpb246IG5vbmU7XG59XG5cbi51Yi1lbWItaWZyYW1lLXdyYXBwZXIgLnViLWVtYi1jbG9zZTo6YmVmb3JlIHtcbiAgY29udGVudDogJyc7XG4gIGhlaWdodDogNDBweDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICByaWdodDogLTEwcHg7XG4gIHRvcDogLTEwcHg7XG4gIHdpZHRoOiA0MHB4O1xufVxuXG4udWItZW1iLWlmcmFtZS13cmFwcGVyIC51Yi1lbWItY2xvc2U6aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICB0cmFuc2Zvcm06IHNjYWxlKDEuMik7XG59XG5cbi51Yi1lbWItaWZyYW1lLXdyYXBwZXIgLnViLWVtYi1jbG9zZTphY3RpdmUsXG4udWItZW1iLWlmcmFtZS13cmFwcGVyIC51Yi1lbWItY2xvc2U6Zm9jdXMge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIC4zNSk7XG4gIGNvbG9yOiAjNDQ0O1xuICBvdXRsaW5lOiBub25lO1xufVxuXG4udWItZW1iLWlmcmFtZS13cmFwcGVyIC51Yi1lbWItaWZyYW1lIHtcbiAgLyogVGhpcyBlbGVtZW50IGlzIHNpemVkIGF0IGNvbXBvbmVudCByZW5kZXIgdGltZSAqL1xuICBib3JkZXI6IDA7XG4gIG1heC1oZWlnaHQ6IDEwMCU7XG4gIG1heC13aWR0aDogMTAwJTtcbn1cblxuLnViLWVtYi1vdmVybGF5IC51Yi1lbWItaWZyYW1lLXdyYXBwZXIgLnViLWVtYi1pZnJhbWUge1xuICBib3gtc2hhZG93OiAwIDAgMTJweCByZ2JhKDAsIDAsIDAsIC4zKSwgMCAxcHggNXB4IHJnYmEoMCwgMCwgMCwgLjIpO1xufVxuXG4udWItZW1iLW92ZXJsYXkgLnViLWVtYi1pZnJhbWUtd3JhcHBlci51Yi1lbWItbW9iaWxlIHtcbiAgbWF4LXdpZHRoOiAxMDB2dztcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
+    <style>
+        .ub-emb-overlay {
+            transition: visibility .3s step-end;
+            visibility: hidden
+        }
+
+        .ub-emb-overlay.ub-emb-visible {
+            transition: none;
+            visibility: visible
+        }
+
+        .ub-emb-overlay .ub-emb-backdrop,
+        .ub-emb-overlay .ub-emb-scroll-wrapper {
+            opacity: 0;
+            position: fixed;
+            transition: opacity .3s ease, z-index .3s step-end;
+            z-index: -1
+        }
+
+        .ub-emb-overlay .ub-emb-backdrop {
+            background: rgba(0, 0, 0, .6);
+            bottom: -1000px;
+            left: -1000px;
+            right: -1000px;
+            top: -1000px
+        }
+
+        .ub-emb-overlay .ub-emb-scroll-wrapper {
+            -webkit-overflow-scrolling: touch;
+            bottom: 0;
+            box-sizing: border-box;
+            left: 0;
+            overflow: auto;
+            padding: 30px;
+            right: 0;
+            text-align: center;
+            top: 0;
+            white-space: nowrap;
+            width: 100%
+        }
+
+        .ub-emb-overlay .ub-emb-scroll-wrapper:before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle
+        }
+
+        .ub-emb-overlay.ub-emb-mobile .ub-emb-scroll-wrapper {
+            padding: 30px 0
+        }
+
+        .ub-emb-overlay.ub-emb-visible .ub-emb-backdrop,
+        .ub-emb-overlay.ub-emb-visible .ub-emb-scroll-wrapper {
+            opacity: 1;
+            transition: opacity .4s ease;
+            z-index: 2147483647
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL092ZXJsYXkuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUNFLGtDQUFvRCxDQUNwRCxpQkFDRixDQUVBLCtCQUNFLGVBQWdCLENBQ2hCLGtCQUNGLENBRUEsd0VBRUUsU0FBVSxDQUNWLGNBQWUsQ0FDZixnREFFdUMsQ0FDdkMsVUFDRixDQUdBLGlDQUNFLHlCQUE2QixDQUU3QixjQUFlLENBQ2YsWUFBYSxDQUNiLGFBQWMsQ0FIZCxXQUlGLENBRUEsdUNBV0UsZ0NBQWlDLENBUmpDLFFBQVMsQ0FGVCxxQkFBc0IsQ0FHdEIsTUFBTyxDQUVQLGFBQWMsQ0FDZCxZQUF3QixDQUZ4QixPQUFRLENBR1IsaUJBQWtCLENBTmxCLEtBQU0sQ0FRTixrQkFBbUIsQ0FEbkIsVUFHRixDQUVBLDhDQUNFLFVBQVcsQ0FDWCxvQkFBcUIsQ0FDckIsV0FBWSxDQUNaLHFCQUNGLENBRUEscURBQ0UsY0FDRixDQUVBLHNHQUVFLFNBQVUsQ0FDViwyQkFBZ0UsQ0FHaEUsa0JBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyIudWItZW1iLW92ZXJsYXkge1xuICB0cmFuc2l0aW9uOiB2aXNpYmlsaXR5ICRvdmVybGF5RmFkZU91dFNwZWVkIHN0ZXAtZW5kO1xuICB2aXNpYmlsaXR5OiBoaWRkZW47XG59XG5cbi51Yi1lbWItb3ZlcmxheS51Yi1lbWItdmlzaWJsZSB7XG4gIHRyYW5zaXRpb246IG5vbmU7XG4gIHZpc2liaWxpdHk6IHZpc2libGU7XG59XG5cbi51Yi1lbWItb3ZlcmxheSAudWItZW1iLWJhY2tkcm9wLFxuLnViLWVtYi1vdmVybGF5IC51Yi1lbWItc2Nyb2xsLXdyYXBwZXIge1xuICBvcGFjaXR5OiAwO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHRyYW5zaXRpb246XG4gICAgb3BhY2l0eSAkb3ZlcmxheUZhZGVPdXRTcGVlZCAkb3ZlcmxheUZhZGVUcmFuc2l0aW9uRm4sXG4gICAgei1pbmRleCAkb3ZlcmxheUZhZGVPdXRTcGVlZCBzdGVwLWVuZDtcbiAgei1pbmRleDogLTE7XG59XG5cbi8qIGZvciB0aGUgc2FrZSBvZiBtb2JpbGUgYnJvd3NlcnMsIG1ha2UgdGhlIGJhY2tkcm9wIGV4dGVuZCAxMDAwcHggb3V0c2lkZSBvZiB0aGUgd2luZG93ICovXG4udWItZW1iLW92ZXJsYXkgLnViLWVtYi1iYWNrZHJvcCB7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgLjYpO1xuICB0b3A6IC0xMDAwcHg7XG4gIGJvdHRvbTogLTEwMDBweDtcbiAgbGVmdDogLTEwMDBweDtcbiAgcmlnaHQ6IC0xMDAwcHg7XG59XG5cbi51Yi1lbWItb3ZlcmxheSAudWItZW1iLXNjcm9sbC13cmFwcGVyIHtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgdG9wOiAwO1xuICBib3R0b206IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBvdmVyZmxvdzogYXV0bztcbiAgcGFkZGluZzogJG92ZXJsYXlQYWRkaW5nO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAtd2Via2l0LW92ZXJmbG93LXNjcm9sbGluZzogdG91Y2g7XG59XG5cbi51Yi1lbWItb3ZlcmxheSAudWItZW1iLXNjcm9sbC13cmFwcGVyOjpiZWZvcmUge1xuICBjb250ZW50OiAnJztcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG59XG5cbi51Yi1lbWItb3ZlcmxheS51Yi1lbWItbW9iaWxlIC51Yi1lbWItc2Nyb2xsLXdyYXBwZXIge1xuICBwYWRkaW5nOiAkb3ZlcmxheVBhZGRpbmcgMDtcbn1cblxuLnViLWVtYi1vdmVybGF5LnViLWVtYi12aXNpYmxlIC51Yi1lbWItYmFja2Ryb3AsXG4udWItZW1iLW92ZXJsYXkudWItZW1iLXZpc2libGUgLnViLWVtYi1zY3JvbGwtd3JhcHBlciB7XG4gIG9wYWNpdHk6IDE7XG4gIHRyYW5zaXRpb246IG9wYWNpdHkgJG92ZXJsYXlGYWRlSW5TcGVlZCAkb3ZlcmxheUZhZGVUcmFuc2l0aW9uRm47XG5cbiAgLyogVGhpcyBpcyBzZXQgMSBoaWdoZXIgdGhhbiBzdGlja3kgYmFycyAqL1xuICB6LWluZGV4OiAyMTQ3NDgzNjQ3O1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <style>
+        .ub-emb-bar {
+            transition: visibility .2s step-end;
+            visibility: hidden
+        }
+
+        .ub-emb-bar.ub-emb-visible {
+            transition: none;
+            visibility: visible
+        }
+
+        .ub-emb-bar .ub-emb-bar-frame {
+            left: 0;
+            position: fixed;
+            right: 0;
+            text-align: center;
+            transition: bottom .2s ease-in-out, top .2s ease-in-out, z-index .2s step-end;
+            z-index: -1
+        }
+
+        .ub-emb-bar.ub-emb-ios .ub-emb-bar-frame {
+            right: auto;
+            width: 100%
+        }
+
+        .ub-emb-bar.ub-emb-visible .ub-emb-bar-frame {
+            transition: bottom .3s ease-in-out, top .3s ease-in-out;
+            z-index: 2147483646
+        }
+
+        .ub-emb-bar .ub-emb-close {
+            bottom: 0;
+            margin: auto 0;
+            top: 0
+        }
+
+        .ub-emb-bar:not(.ub-emb-mobile) .ub-emb-close {
+            right: 20px
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL1N0aWNreUJhci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsWUFDRSxrQ0FBdUQsQ0FDdkQsaUJBQ0YsQ0FFQSwyQkFDRSxlQUFnQixDQUNoQixrQkFDRixDQUVBLDhCQUNFLE1BQU8sQ0FDUCxjQUFlLENBQ2YsT0FBUSxDQUNSLGlCQUFrQixDQUNsQiwwRUFHMEMsQ0FDMUMsVUFDRixDQUVBLHlDQUNFLFVBQVcsQ0FDWCxVQUlGLENBRUEsNkNBQ0UscURBRXdELENBR3hELGtCQUNGLENBRUEsMEJBQ0UsUUFBUyxDQUNULGFBQWMsQ0FDZCxLQUNGLENBRUEsOENBQ0UsVUFDRiIsInNvdXJjZXNDb250ZW50IjpbIi51Yi1lbWItYmFyIHtcbiAgdHJhbnNpdGlvbjogdmlzaWJpbGl0eSAkc3RpY2t5QmFyU2xpZGVPdXRTcGVlZCBzdGVwLWVuZDtcbiAgdmlzaWJpbGl0eTogaGlkZGVuO1xufVxuXG4udWItZW1iLWJhci51Yi1lbWItdmlzaWJsZSB7XG4gIHRyYW5zaXRpb246IG5vbmU7XG4gIHZpc2liaWxpdHk6IHZpc2libGU7XG59XG5cbi51Yi1lbWItYmFyIC51Yi1lbWItYmFyLWZyYW1lIHtcbiAgbGVmdDogMDtcbiAgcG9zaXRpb246IGZpeGVkO1xuICByaWdodDogMDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB0cmFuc2l0aW9uOlxuICAgIGJvdHRvbSAkc3RpY2t5QmFyU2xpZGVPdXRTcGVlZCAkc3RpY2t5QmFyU2xpZGVUcmFuc2l0aW9uRm4sXG4gICAgdG9wICRzdGlja3lCYXJTbGlkZU91dFNwZWVkICRzdGlja3lCYXJTbGlkZVRyYW5zaXRpb25GbixcbiAgICB6LWluZGV4ICRzdGlja3lCYXJTbGlkZU91dFNwZWVkIHN0ZXAtZW5kO1xuICB6LWluZGV4OiAtMTtcbn1cblxuLnViLWVtYi1iYXIudWItZW1iLWlvcyAudWItZW1iLWJhci1mcmFtZSB7XG4gIHJpZ2h0OiBhdXRvO1xuICB3aWR0aDogMTAwJTtcblxuICAvKiBgcmlnaHQ6MGAgY2F1c2VzIHNjcm9sbCB1cCBqYW5rIGluIExQcyBvbiBpT1MxMCwgd2hlcmVhcyAxMDB2dyBkb2Vzbid0IChzZWUgc2Nyb2xsLXVwLmh0bWwpLlxuICAgICBPdXRzaWRlIG9mIGlPUywgd2Ugd2FudCB0byBhdm9pZCAxMDB2dywgYmVjYXVzZSBpdCBpbmNsdWRlcyB0aGUgd2lkdGggb2YgdGhlIHNjcm9sbGJhci4gKi9cbn1cblxuLnViLWVtYi1iYXIudWItZW1iLXZpc2libGUgLnViLWVtYi1iYXItZnJhbWUge1xuICB0cmFuc2l0aW9uOlxuICAgIGJvdHRvbSAkc3RpY2t5QmFyU2xpZGVJblNwZWVkICRzdGlja3lCYXJTbGlkZVRyYW5zaXRpb25GbixcbiAgICB0b3AgJHN0aWNreUJhclNsaWRlSW5TcGVlZCAkc3RpY2t5QmFyU2xpZGVUcmFuc2l0aW9uRm47XG5cbiAgLyogVGhpcyBpcyBzZXQgMSBsb3dlciB0aGFuIG92ZXJsYXlzICovXG4gIHotaW5kZXg6IDIxNDc0ODM2NDY7XG59XG5cbi51Yi1lbWItYmFyIC51Yi1lbWItY2xvc2Uge1xuICBib3R0b206IDA7XG4gIG1hcmdpbjogYXV0byAwO1xuICB0b3A6IDA7XG59XG5cbi51Yi1lbWItYmFyOm5vdCgudWItZW1iLW1vYmlsZSkgLnViLWVtYi1jbG9zZSB7XG4gIHJpZ2h0OiAyMHB4O1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+    </style>
+    <link rel="stylesheet" href="./Alle spil - OnlineQuizzen.dk_files/OneSignalSDKStyles.css">
+</head>
+
+<body>
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRDPWS5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+    <header id="top-menu" class="  ">
+        <div class="header-right  "></div>
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <a href="https://onlinequizzen.dk/home"><img src="./Alle spil - OnlineQuizzen.dk_files/logo.png"
+                            class="img-responsive logo-img"></a>
+                </div>
+                <div class="money pull-right">
+
+                    <a href="https://onlinequizzen.dk/points">
+                        <div id="top-menu-points" class="icon-coins-money-stack"> 0</div>
+                    </a>
+
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+    <style type="text/css">
+        @media (min-width: 1024px) {
+            header .logo {
+                margin-top: 18px !important;
+                height: 25px !important;
+            }
+        }
+    </style>
+
+
+
+    <section class="hide-on-mob">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" id="hidden_block">
+
+
+                    <div class="left_block">
+
+
+                        <div class="photo_upload">
+                            <a href="https://onlinequizzen.dk/account_edit"><button class="p_upload_button"><i
+                                        class="icon-photo-camera"></i><br>Tilføj dit profilbillede</button></a>
+                        </div>
+
+
+                        <a href="https://onlinequizzen.dk/account">
+                            <div class="user_name">Fsdfsdfsd</div>
+                        </a>
+
+
+                        <div class="points" id="left-menu-points"><a href="https://onlinequizzen.dk/points">
+                                <p>0</p>point
+                            </a></div>
+
+                        <div class="games_played" id="left-menu-credits">
+                            <p>4</p> kreditter
+                        </div>
+
+                        <div class="games_played" id="left-menu-games-played">
+                            <p>1</p>spil
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+
+                    <div class="main_center_block">
+
+
+                        <div class="main_text">
+                            Du har tjent 6 kreditter ved at logge ind i dag. Log ind i morgen og tjen 7 kreditter. Du
+                            har spillet 1 dage i træk.
+                        </div>
+
+
+                        <h2>Vælg spil:</h2>
+                        <ul class="list_items">
+                            <li>
+                                <a class="active" href="https://onlinequizzen.dk/game"><i
+                                        class="icon-gamepad"></i><span>Alle spil</span></a>
+                            </li>
+                            <li>
+                                <a href="https://onlinequizzen.dk/game/popular/list"><i
+                                        class="icon-balloon"></i><span>Populære</span></a>
+                            </li>
+
+
+
+                            <li>
+                                <a href="https://onlinequizzen.dk/game/favorite/list"><i
+                                        class="icon-pillow"></i><span>Favoritter</span></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/101" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/101" target="_blank">
+                                            <h3>Geografiquiz</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Test din viden i geografi. Spil med i vores geografiquiz og få 1 lod for hvert
+                                    korrekt svar. Du mister tid hver gang du svarer forkert.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/101" target="_blank"><img
+                                        class="img-responsive"
+                                        src="./Alle spil - OnlineQuizzen.dk_files/Geography_dk.png" alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="101">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/101" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/108" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/108" target="_blank">
+                                            <h3>Historiequiz</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Test din paratviden indenfor historie og optjen 1 lod for hvert korrekt svar. Et
+                                    forkert svar fratrækker 10 sekunder fra din tid.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/108" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/History_dk.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="108">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/108" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/106" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/106" target="_blank">
+                                            <h3>Julequizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Kom i rigtig julestemning med vores julequiz. Tag julequizzen og optjen lodder for
+                                    hvert korrekt svar. Du mister tid hver gang du svarer forkert.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/106" target="_blank"><img
+                                        class="img-responsive"
+                                        src="./Alle spil - OnlineQuizzen.dk_files/Christmas_dk.png" alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="106">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/106" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/105" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/105" target="_blank">
+                                            <h3>Sportquiz</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Test din paratviden indenfor sport og optjen 1 lod for hvert korrekt svar. Du mister
+                                    10 sekunder hver gang du svarer forkert.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/105" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Sport.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="105">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/105" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/109" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/109" target="_blank">
+                                            <h3>Matematikquiz</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Hvor hurtig er du til at udregne matematikopgaver? Test dig selv i denne
+                                    matematikquiz fyldt med matematikopgaver. Der er 2 lodder per korrekt svar og du
+                                    mister 10 sekunder for hvert forkert svar.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/109" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Math_dk.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="109">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/109" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/104" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/104" target="_blank">
+                                            <h3>Einsteinquiz</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>I Einsteinquizzen får du alle de sværeste spørgsmål og du får virkelig testet din
+                                    paratviden. Du får 5 lodder hver gang du svarer et spørgsmål korrekt. Du har 10
+                                    spørgsmål og de skal svares indenfor 2 minutter.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/104" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Einstein.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="104">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/104" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/112" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/112" target="_blank">
+                                            <h3>Tv-seriequizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Se om du kan svare korrekt på spørgsmål indenfor alt omkring tv-serier.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/112" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/TV_dk.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="112">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/112" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/100" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/100" target="_blank">
+                                            <h3>Videnskabsquiz</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Spil med i videnskabsquizzen og få 1 lod for hvert korrekt svar. Du mister tid hver
+                                    gang du svarer forkert.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/100" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Science_dk.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="100">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/100" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/102" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/102" target="_blank">
+                                            <h3>Filmquiz</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Har du styr på dine favorit film og skuespillere? Spil med i filmquizzen og få 1 lod
+                                    for hvert korrekt svar. Du mister tid hver gang du svarer forkert.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/102" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Movie_dk.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="102">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/102" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/111" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/111" target="_blank">
+                                            <h3>Politikquizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Test din paratviden indenfor politik og optjen point for hvert korrekt svar.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/111" target="_blank"><img
+                                        class="img-responsive"
+                                        src="./Alle spil - OnlineQuizzen.dk_files/Politics_dk.png" alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="111">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/111" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/107" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/107" target="_blank">
+                                            <h3>Teknikquiz</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Hvor god er din paratviden indenfor teknik? Prøv Teknikquizzen og find ud af det. Du
+                                    får 1 lod per korrekt svar og straffes med 10 sekunder fratrukket per forkert svar.
+                                </p>
+                                <a href="https://onlinequizzen.dk/game/quiz/107" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Tech_dk.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="107">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/107" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/110" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/110" target="_blank">
+                                            <h3>Påskequizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Påskequizzen er fyldt med påskehygge og gode spørgsmål om påsken. I påskequizzen
+                                    optjener du 2 lodder per korrekt spørgsmål modsat de andre quizzer, som kun giver 1
+                                    lod. Så kom og vær med.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/110" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Easter.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="110">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/110" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/113" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/113" target="_blank">
+                                            <h3>Litteraturquizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Få sat din paratviden omkring litteratur på prøve i denne quiz og optjen point.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/113" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Book_dk.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="113">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/113" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/103" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/103" target="_blank">
+                                            <h3>Musikquiz</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Hvor meget ved du om musik? Spil med og find ud af det. Du optjener 1 lod for hvert
+                                    korrekt svar og mister tid hver gang du svarer forkert.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/103" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Music_dk.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="103">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/103" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/205" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/205" target="_blank">
+                                            <h3>Sommerquizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Sommerquizzen er fuld med hyggelige quiz spørgsmål om sommeren. Hvor mange
+                                    sommerspørgsmål kan du svare korrekt?</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/205" target="_blank"><img
+                                        class="img-responsive"
+                                        src="./Alle spil - OnlineQuizzen.dk_files/quiz_summer.png" alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 1 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="205">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/205" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/114" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/114" target="_blank">
+                                            <h3>Mors dag quizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Spil mors dag quizzen og se hvor meget du ved omkring mors dag. Kom og vær med i
+                                    hyggen. Der er 1 point per korrekt svar.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/114" target="_blank"><img
+                                        class="img-responsive" src="./Alle spil - OnlineQuizzen.dk_files/Mothersday.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 2 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="114">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/114" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/228" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/228" target="_blank">
+                                            <h3>Elvis quizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Svar på Elvis spørgsmål omkring musikken, Elvis liv m.m.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/228" target="_blank"><img
+                                        class="img-responsive"
+                                        src="./Alle spil - OnlineQuizzen.dk_files/cnCFVjPKfRyXOUoHUBCAYHH9MY5tIcQcmCfK9C1m.jpeg"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 1 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="228">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/228" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/230" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/230" target="_blank">
+                                            <h3>Titanic quizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Spørgsmål om Titanic katestrofen og se hvor meget du ved.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/230" target="_blank"><img
+                                        class="img-responsive"
+                                        src="./Alle spil - OnlineQuizzen.dk_files/KEBLjK9TZWXBNavePruIUD3tKE5oDfWlbASmemg3.png"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 1 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="230">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/230" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/229" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/229" target="_blank">
+                                            <h3>Donald Trump quizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Quiz om Donald Trump i forhold til hans liv, familie og som præsident.</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/229" target="_blank"><img
+                                        class="img-responsive"
+                                        src="./Alle spil - OnlineQuizzen.dk_files/98M1U9OMBuFk9zhL7GMLmiX7vcWWTxYRqZ2xaiix.webp"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 1 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="229">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/229" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="game_block_main">
+                        <div class="wrap">
+                            <div class="top_section_block">
+                                <div class="left_part">
+                                    <div class="question_ico">
+
+                                        <a href="https://onlinequizzen.dk/game/quiz/231" target="_blank"> <i
+                                                class="icon-question"></i></a>
+                                    </div>
+                                    <div class="game_name">
+                                        <a href="https://onlinequizzen.dk/game/quiz/231" target="_blank">
+                                            <h3>Valentines quizzen</h3>
+                                        </a>
+                                        <span><a href="https://onlinequizzen.dk/game/type/1">Quiz</a></span>
+                                    </div>
+                                </div>
+                                <div class="right_part pull-right">
+
+                                </div>
+                            </div>
+                            <div class="mid_section_block">
+                                <p>Svar korrekt på spørgsmål omkring Valentines dag. Hvor romantisk er du?</p>
+                                <a href="https://onlinequizzen.dk/game/quiz/231" target="_blank"><img
+                                        class="img-responsive"
+                                        src="./Alle spil - OnlineQuizzen.dk_files/eAL3FNyuHvdJdNMHoUMzEbXdy7gc5H4OeL56fEiI.webp"
+                                        alt="Photo"></a>
+
+                                <div class="left_mid_part">
+
+                                </div>
+                                <div class="right_mid_part pull-right">
+
+
+
+                                    <span> Koster 1 kreditter per spil (du har 4 kreditter) </span>
+
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="group_buttons">
+
+
+
+                                <a href="https://onlinequizzen.dk/game#" id=""><button id="markFavoriteButton"
+                                        class="my_button pull-left" gameid="231">Marker som favorit</button></a>
+
+
+
+
+
+
+                                <a href="https://onlinequizzen.dk/game/quiz/231" target="_blank"><button
+                                        class="play_button my_button pull-right">Spil</button></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                    <!-- Later add list of prizes for game type and latest winners for game type -->
+
+                </div>
+                <div class="col-md-3">
+
+                    <div class="right_block">
+
+
+
+                        <div class="main_block_right">
+                            <h2>Populære spil</h2>
+
+
+                            <div class="game_sample">
+                                <a href="https://onlinequizzen.dk/game/quiz/101">
+                                    <img src="./Alle spil - OnlineQuizzen.dk_files/Geography_dk.png" alt="Foto"
+                                        class="img-responsive"> <!-- Set from game when images have been added -->
+                                    <span>Geografiquiz</span>
+                                </a>
+                            </div>
+
+
+                            <div class="game_sample">
+                                <a href="https://onlinequizzen.dk/game/quiz/108">
+                                    <img src="./Alle spil - OnlineQuizzen.dk_files/History_dk.png" alt="Foto"
+                                        class="img-responsive"> <!-- Set from game when images have been added -->
+                                    <span>Historiequiz</span>
+                                </a>
+                            </div>
+
+
+                            <div class="game_sample">
+                                <a href="https://onlinequizzen.dk/game/quiz/106">
+                                    <img src="./Alle spil - OnlineQuizzen.dk_files/Christmas_dk.png" alt="Foto"
+                                        class="img-responsive"> <!-- Set from game when images have been added -->
+                                    <span>Julequizzen</span>
+                                </a>
+                            </div>
+
+
+                            <div class="game_sample">
+                                <a href="https://onlinequizzen.dk/game/quiz/105">
+                                    <img src="./Alle spil - OnlineQuizzen.dk_files/Sport.png" alt="Foto"
+                                        class="img-responsive"> <!-- Set from game when images have been added -->
+                                    <span>Sportquiz</span>
+                                </a>
+                            </div>
+
+
+                            <div class="game_sample">
+                                <a href="https://onlinequizzen.dk/game/quiz/109">
+                                    <img src="./Alle spil - OnlineQuizzen.dk_files/Math_dk.png" alt="Foto"
+                                        class="img-responsive"> <!-- Set from game when images have been added -->
+                                    <span>Matematikquiz</span>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="show-on-mob">
+        <section class="daily">
+            <div class="daily__title">Daily Special</div>
+            <div class="daily__list">
+                <div class="daily-item">
+                    <div class="daily-item__img">
+                        <img src="new-files/img/game-1.png" alt="Jigsaw Game">
+                        <div class="daily-item__title">Jigsaw Game</div>
+                    </div>
+                    <div class="daily-item__desc">Test your knowledge of the world countries.</div>
+                    <div class="daily-item__nav">
+                        <a href="#" class="custom-btn">Play</a>
+                        <div class="star-checkbox">
+                            <input class="check-box" type="checkbox" id="star-1" name="Caller Voice" value="game-1">
+                            <label for="star-1"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-item">
+                    <div class="daily-item__img">
+                        <img src="new-files/img/game-2.png" alt="Word Game">
+                        <div class="daily-item__title">Word Game</div>
+                    </div>
+                    <div class="daily-item__desc">Test your knowledge of the world countries.</div>
+                    <div class="daily-item__nav">
+                        <a href="#" class="custom-btn">Play</a>
+                        <div class="star-checkbox">
+                            <input class="check-box" type="checkbox" id="star-2" name="Caller Voice" value="game-2">
+                            <label for="star-2"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-item">
+                    <div class="daily-item__img">
+                        <img src="new-files/img/game-1.png" alt="Jigsaw Game">
+                        <div class="daily-item__title">Jigsaw Game</div>
+                    </div>
+                    <div class="daily-item__desc">Test your knowledge of the world countries.</div>
+                    <div class="daily-item__nav">
+                        <a href="#" class="custom-btn">Play</a>
+                        <div class="star-checkbox">
+                            <input class="check-box" type="checkbox" id="star-3" name="Caller Voice" value="game-3">
+                            <label for="star-3"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-item">
+                    <div class="daily-item__img">
+                        <img src="new-files/img/game-2.png" alt="Word Game">
+                        <div class="daily-item__title">Word Game</div>
+                    </div>
+                    <div class="daily-item__desc">Test your knowledge of the world countries.</div>
+                    <div class="daily-item__nav">
+                        <a href="#" class="custom-btn">Play</a>
+                        <div class="star-checkbox">
+                            <input class="check-box" type="checkbox" id="star-4" name="Caller Voice" value="game-4">
+                            <label for="star-4"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-item">
+                    <div class="daily-item__img">
+                        <img src="new-files/img/game-2.png" alt="Word Game">
+                        <div class="daily-item__title">Word Game</div>
+                    </div>
+                    <div class="daily-item__desc">Test your knowledge of the world countries.</div>
+                    <div class="daily-item__nav">
+                        <a href="#" class="custom-btn">Play</a>
+                        <div class="star-checkbox">
+                            <input class="check-box" type="checkbox" id="star-5" name="Caller Voice" value="game-5">
+                            <label for="star-5"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="games">
+            <div class="games__header">
+                <div class="games__title">Uundgåelige spil</div>
+                <a href="#" class="games__all">
+                    Se alle
+                </a>
+            </div>
+            <div class="games-list">
+                <div class="game-item">
+                    <div class="game-item__img">
+                        <img src="new-files/img/game-1.png" alt="Jigsaw Game">
+                    </div>
+                    <div class="game-item__text">
+                        <div class="game-item__title">Jigsaw Game</div>
+                        <div class="game-item__desc">Test your knowledge of the world countries.</div>
+                        <div class="game-item__nav">
+                            <a href="#" class="custom-btn">Play</a>
+                            <div class="star-checkbox">
+                                <input class="check-box" type="checkbox" id="star-6" name="Caller Voice" value="game-6"
+                                    checked>
+                                <label for="star-6"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <div class="game-item__img">
+                        <img src="new-files/img/game-2.png" alt="Word Game">
+                    </div>
+                    <div class="game-item__text">
+                        <div class="game-item__title">Word Game</div>
+                        <div class="game-item__desc">Test your knowledge of the world countries.</div>
+                        <div class="game-item__nav">
+                            <a href="#" class="custom-btn">Play</a>
+                            <div class="star-checkbox"><input class="check-box" type="checkbox" id="star-7"
+                                    name="Caller Voice" value="game-7">
+                                <label for="star-7"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-item">
+                    <div class="game-item__img">
+                        <img src="new-files/img/game-1.png" alt="Jigsaw Game">
+                    </div>
+                    <div class="game-item__text">
+                        <div class="game-item__title">Jigsaw Game</div>
+                        <div class="game-item__desc">Test your knowledge of the world countries.</div>
+                        <div class="game-item__nav">
+                            <a href="#" class="custom-btn">Play</a>
+                            <div class="star-checkbox">
+                                <input class="check-box" type="checkbox" id="star-8" name="Caller Voice"
+                                    value="game-86">
+                                <label for="star-8"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <div class="game-item__img">
+                        <img src="new-files/img/game-1.png" alt="Jigsaw Game">
+                    </div>
+                    <div class="game-item__text">
+                        <div class="game-item__title">Jigsaw Game</div>
+                        <div class="game-item__desc">Test your knowledge of the world countries.</div>
+                        <div class="game-item__nav">
+                            <a href="#" class="custom-btn">Play</a>
+                            <div class="star-checkbox">
+                                <input class="check-box" type="checkbox" id="star-9" name="Caller Voice" value="game-9"
+                                    checked>
+                                <label for="star-9"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="toolbar">
+        <a href="#" class="toolbar-item active">
+            <div class="toolbar-item__icon toolbar-item__icon_games"></div>
+            <div class="toolbar-item__text">Games</div>
+        </a>
+        <a href="#" class="toolbar-item">
+            <div class="toolbar-item__icon toolbar-item__icon_favorites"></div>
+            <div class="toolbar-item__text">Favorites</div>
+        </a>
+        <a href="#" class="toolbar-item">
+            <div class="toolbar-item__icon toolbar-item__icon_highscore"></div>
+            <div class="toolbar-item__text">Highscore</div>
+        </a>
+        <a href="#" class="toolbar-item">
+            <div class="toolbar-item__icon toolbar-item__icon_prizes"></div>
+            <div class="toolbar-item__text">Prizes</div>
+        </a>
+    </div>
+
+
+
+    <footer class=" hide-on-mob">
+        <div class="container">
+            <a href="https://onlinequizzen.dk/game#"><img src="./Alle spil - OnlineQuizzen.dk_files/logo.png"
+                    class="footer_logo"></a>
+            <div class="row">
+                <div class="col-md-6">
+
+
+                </div>
+                <div class="col-md-6">
+
+
+
+                </div>
+            </div>
+            <div class="row">
+                <p class="bottom_footer_text">
+                    © 2025 OnlineQuizzen.dk | HiT Media ApS - Kidholm 12 - 9310 Vodskov - Danmark | <a
+                        href="https://onlinequizzen.dk/help" target="_blank">Hjælp / Kundeservice</a> | <a
+                        href="https://onlinequizzen.dk/terms" target="_blank">Betingelser</a> | <a
+                        href="https://onlinequizzen.dk/privacy" target="_blank">Privatlivspolitik</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Alle spil - OnlineQuizzen.dk_files/jquery-1.12.2.min.js.Без названия"></script>
+    <script src="./Alle spil - OnlineQuizzen.dk_files/bootstrap.min.js.Без названия"></script>
+    <script src="./Alle spil - OnlineQuizzen.dk_files/common.js.Без названия"></script>
+    <script src="./Alle spil - OnlineQuizzen.dk_files/jquery.countdown.js.Без названия"></script>
+    <script src="./Alle spil - OnlineQuizzen.dk_files/script.js.Без названия"></script>
+    <script src="./Alle spil - OnlineQuizzen.dk_files/jquery.polartimer.js.Без названия"></script>
+    <script src="./Alle spil - OnlineQuizzen.dk_files/snap.svg-min.js.Без названия"></script>
+    <script src="new-files/js/app.js"></script>
+    <div id="fb-root"></div>
+
+
+
+
+    <div class="ub-emb-container">
+        <div></div>
+    </div>
+    <script>
+        let mainColor = "#DC7052"; // Hex color of buttons and background
+        let accentColor = "#ED5E36"; // Hex color of button hover
+        let secondaryColor = "#979797"; // Hex grey color 
+    </script>
+</body>
+
+</html>
