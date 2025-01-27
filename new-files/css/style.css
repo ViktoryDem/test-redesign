@@ -254,6 +254,10 @@ a.custom-btn:active, a.custom-btn:focus {
     text-decoration: underline;
   }
 }
+.games__all:focus, .games__all:active {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
 
 .games-list {
   display: flex;
